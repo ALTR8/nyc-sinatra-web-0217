@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landmarks Index</title>
+</head>
+<body>
+	<label>Landmarks Index</label>
+	<br></br>
+	<% @landmarks.each do |l| %>
+	<p><a href="/landmarks/<%=l.id%>"><%= l.name %> <br> <%= l.year_completed%></a></p>
+	<%end%>
+
+	<form action="/landmarks/new" method="get">
+	<input type="submit" name="Add New Landmark" value="Add New Landmark">
+	</form>
+
+
+
+
+</body>
+</html>

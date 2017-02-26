@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= @figure.name %></title>
+</head>
+<body>
+	<h1><%= @figure.name %></h1>
+	<h2>Associated Landmarks:</h2>
+		<%@figure.landmarks.each do |l|%>
+		<%=l.name%>
+	
+		<%end%>
+		<br></break>
+	<h2>Associated Titles:</h2>
+		<%@figure.titles.each do |t|%>
+		<%=t.name%>
+		<%end%>
+
+	<form action="/figures" method="get"> 
+	<input type="submit" name="Back to Index" value="Back to Index"></form>
+	<p>OR</p>
+	<form action="/figures/<%=@figure.id%>/edit" method="get">
+	<input type="submit" name="Edit this Figure" value="Edit this Figure"></form>
+	<form action="/figures/<%=@figure.id%>/delete" method="post">
+	<input type="submit" name="Delete Figure" value="Delete Figure"></form>
+
+
+</body>
+</html>

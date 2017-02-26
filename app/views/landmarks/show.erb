@@ -1,10 +1,22 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <tr>
-    <td><%= @landmark.name %></td>
-    <td><%= @landmark.year_completed %></td>
-  </tr>
-<table>
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= @landmark.name %></title>
+</head>
+<body>
+	<h1>Name</h1>
+	<h1><%=@landmark.name%></h1>
+	<br>
+	<h2>Year Completed</h2>
+	<h2><%=@landmark.year_completed%></h2>
+
+	<form action="/landmarks" method="get">
+	<input type="submit" name="Back to Index" value="Back to Index"></form>
+	<form action="/landmarks/<%=@landmark.id%>/edit" method="get">
+	<input type="submit" name="Edit" value="Edit Landmark"></form>
+	<form action="/landmarks" method="post">
+
+
+
+</body>
+</html>

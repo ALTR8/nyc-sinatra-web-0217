@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Figure Index</title>
+</head>
+<body>
+	<label>Figures Index</label>
+	<br></br>
+	<% @figures.each do |f| %>
+	<p><a href="/figures/<%= f.id%>"><%= f.name %></a></p>
+	<%end%>
+
+	<form action="/figures/new" method="get">
+	<input type="submit" name="Add New Figure" value="Add New Figure">
+	</form>
+
+</body>
+</html>
